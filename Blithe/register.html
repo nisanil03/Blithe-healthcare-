@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>Firebase_form</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="box">
+            <div class="form">
+                <h2>Register as</h2>
+
+                <div class="button">
+                    <input type="radio" id="Netflix" 
+               name="brand" value="Netflix"> 
+        <label for="Netflix"><h3>Doctor</h3></label> 
+    
+    
+
+        <input type="radio" id="Audi" 
+               name="brand" value="Audi"> 
+        <label for="Audi"><h3>Patient</h3></label> 
+                </div>
+                
+                <form>
+                    
+                    
+                    <div class="inputbox">
+                        <input type="email" value="" id="email" required>
+                        <span>E-mail</span>
+                    </div>
+                    <div class="inputbox">
+                        <input type="password" value="" id="phone" required>
+                        <span>Password</span>
+                    </div>
+                    <input type="submit" value="submit" class="sub" id="submit">
+                    <a href="index.html#contact" >
+                    <h5>Already have a account Login</h5>
+                </a>
+                </form>
+            </div>
+        </div>
+        <script type="module">
+               // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+            import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
+  
+  // Your web app's Firebase configuration
+            const firebaseConfig = {
+                apiKey: "AIzaSyA6LPwFVISD3Whr-s-lsQ8TOtCs3plvwbA",
+                authDomain: "blithe-392c9.firebaseapp.com",
+                projectId: "blithe-392c9",
+                storageBucket: "blithe-392c9.appspot.com",
+                messagingSenderId: "648452301360",
+                appId: "1:648452301360:web:a60de3c8ae3226eeb483f5",
+                measurementId: "G-H0ZZ322SW4"
+            };
+
+  // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+
+   //get ref to database services
+             const db = getDatabase(app);
+
+             document.getElementById("submit").addEventListener('click', function(e){
+              e.preventDefault();
+              set(ref(db, 'user/' + document.getElementById("email").value),
+              {
+   
+                // username: document.getElementById("username").value,
+                Email: document.getElementById("email").value,
+                Password: document.getElementById("phone").value
+
+              });
+                alert("Registration Sucessfull Continue to Login !");
+             })
+        </script>
+    </body>
+</html>

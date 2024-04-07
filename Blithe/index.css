@@ -1,0 +1,421 @@
+/* why choose
+doctor slider
+surgery availables
+services : ambulance */
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #e2e2e2;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    background-color: rgb(9, 102, 102);
+    color: white;
+}
+ul {
+    display: flex;
+}
+ul li{
+    list-style: none;
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin-inline: 20px;
+}
+ul li a:hover{
+    color: black;
+    border-bottom: 2px solid black;
+}
+.logo{
+    font-size: 22px;
+    text-decoration: none;
+}
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(15, 128, 128);
+    color: white;
+    padding: 8px;
+    height: 600px;
+    margin-top: 55px;
+}
+
+.mainText h1{
+    font-size: 55px;
+}
+
+.mainText h3{
+    font-size: 35px;
+    margin-top: 12px;
+}
+.mainText button{
+    width: 140px;
+    height: 40px;
+    border: none;
+    margin-top: 22px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+.mainText button:hover{
+    border: 2px solid black;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+     
+}
+.doctors{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card{
+    width: 300px;
+    height: 380px;
+    background-color: #fff;
+    margin-inline: 20px;
+    border-radius: 4px;
+    margin-top: 22px;
+}
+.card img{
+    width: 100%;
+    height: 300px;
+    border-radius: 4px;
+}
+.card p{
+    margin-top: 11px;
+    margin-left: 11px;
+}
+.head{
+    text-align: center;
+    padding: 80px;
+    /* background-color: rgb(253, 253, 167); */
+}
+
+.surgery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.surgeryCard{
+    text-align: center;
+    width: 300px;
+    background-color: white;
+    margin-inline: 20px;
+    padding: 20px;
+    margin-top: 22px;
+}
+.surgeryCard img{
+    width: 100px;
+}
+.surgeryCard p{
+    margin-top: 12px;
+}
+
+/* cards */
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    max-width: 1250px;
+    margin: 150px auto;
+    padding: 20px;
+    gap: 20px;
+}
+.card-list .card-item {
+    background: #fff;
+    padding: 26px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+    list-style: none;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: border 0.5s ease;
+}
+.card-list .card-item:hover {
+    border: 2px solid #000;
+}
+.card-list .card-item img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.card-list span {
+    display: inline-block;
+    background: #F7DFF5;
+    margin-top: 32px;
+    padding: 8px 15px;
+    font-size: 0.75rem;
+    border-radius: 50px;
+    font-weight: 600;
+}
+.card-list .developer {
+    background-color: #F7DFF5; 
+    color: #B22485;
+}   
+.card-list .designer {
+    background-color: #d1e8ff;
+    color: #2968a8;
+}
+.card-list .editor {
+    background-color: #d6f8d6; 
+    color: #205c20;
+}
+.card-item h3 {
+    color: #000;
+    font-size: 1.438rem;
+    margin-top: 28px;
+    font-weight: 600;
+}
+.card-item .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-35deg);
+    height: 40px;
+    width: 40px;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin-top: 40px;
+    transition: 0.2s ease;
+}
+.card-list .card-item:hover .arrow  {
+    background: #000;
+    color: #fff; 
+}
+@media (max-width: 1200px) {
+    .card-list .card-item {
+        padding: 15px;
+    }
+}
+@media screen and (max-width: 980px) {
+    .card-list {
+        margin: 0 auto;
+    }
+}
+
+.search{
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* location */
+.location {
+    margin-top: 50px;
+    width: 100%;
+    text-align: center; 
+    
+}
+
+.form-state {
+    display: inline-block;
+    width: 45%; 
+    margin: 5px;
+}
+
+.form-control{
+    width: 250px;
+    height: 50px;
+    text-align: center;
+}
+ 
+.contact{
+    width: 300px;
+    background-color: #fff;
+    padding: 40px;
+    margin: auto;
+    text-align: center;
+    border-radius: 5px;
+}
+.contact h1{
+    
+    color: rgb(9, 77, 77);
+}
+.contact input{
+    width: 90%;
+    padding: 9px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #e2e2e2;
+    border-radius: 2px;
+    margin-top: 20px;
+}
+.contact button{
+    width: 90px;
+    height: 30px;
+    margin-top: 23px;
+    background-color: rgb(12, 95, 95);
+    color: white;
+    font-size: 17px;
+    border: none;
+}
+.footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 66px;
+    color: white;
+    margin-top: 66px;
+    background-color: rgb(6, 51, 51);
+
+}
+.text p{
+    margin-top: 12px;
+}
+
+.content{
+    display: none;
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    right: 50%;
+    width: 500px;
+    transform: translate(-50%, 40%);
+    background-color: #fff;
+    border-radius:11px;
+
+}
+.contentDetail{
+    display: flex;
+    padding: 23px;
+    gap: 22px;
+     
+}
+.contentDetail img{
+    width: 50%;
+    height: 300px;
+}
+.contentDetail p{
+    margin-top: 22px;
+}
+.content button{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(9, 97, 97);
+    border: none;
+    border-radius: 3px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    
+}
+/* login */
+.login{
+    display: flex;
+    gap: 10px;
+    text-align: center;
+    margin-top: 1px;
+    margin-bottom: 10px;
+    padding-top: 0%;
+}
+.login-doc{
+    margin-left: 50px;
+   display: inline-block;
+   font-size: large;
+   border: #000;
+   
+}
+.login-pat{
+  text-align: center;
+  font-size: large;
+}
+#bar{
+    align-items: center;
+    display: none;
+    font-size: 25px;
+}
+@media screen and (max-width:1100px){
+    .main{
+        text-align: center;
+        display: block;
+        height: auto;
+    }
+    .mainText{
+        margin-top: 115px;
+    }
+}
+
+@media screen and (max-width:900px){
+    ul{
+        display: none;
+    }
+    #bar{
+        display: block;
+    }
+
+} 
+
+@media screen and (max-width:850px){
+    .patients{
+        width: 90%;
+    }
+    .patientCard img{
+        width: 40%;
+    }
+}
+@media screen and (max-width:600px){
+    .mainText h1{
+        font-size: 33px;
+    }
+    .main img{
+        width: 90%;
+    }
+    .content{
+        width: 90%;
+    }
+    .contentDetail img{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:500px){
+    .patientCard img{
+        width: 40%;
+        height: 200px;
+        margin-inline: 8px;
+    }
+    .contact{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:400px){
+    .contentDetail img{
+        width: 50%;
+        height: 200px;
+    }
+    .contentDetail{
+        display: block;
+        text-align: center;
+    }
+    .contentDetail h1{
+        font-size: 22px;
+    }
+    .contentDetail p{
+        font-size: 15bpx;
+    }
+}
+
+.log h1{
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+/* chatbot */
+
